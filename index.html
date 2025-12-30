@@ -387,10 +387,22 @@
             margin: 2rem auto;
         }
         
-        .proton-logo {
-            width: 50px;
-            height: 50px;
+        .proton-logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
             flex-shrink: 0;
+        }
+        
+        .proton-logo {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        
+        .proton-badge p {
+            margin: 0;
+            line-height: 1.5;
         }
         
         .proton-badge a {
@@ -457,6 +469,15 @@
             
             .service-icon {
                 margin-top: 0;
+            }
+            
+            .proton-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .proton-logo {
+                height: 50px;
             }
         }
     </style>
@@ -673,7 +694,9 @@
         <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
         
         <div class="proton-badge">
-            <img src="protonmail-logo.png" alt="Proton" class="proton-logo">
+            <a href="https://proton.me" target="_blank" rel="noopener" class="proton-logo-link">
+                <img src="protonmail-logo.svg" alt="Proton - Privacy by default" class="proton-logo">
+            </a>
             <p>We use <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> for the security of your information / Nous utilisons <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> pour la sécurité de vos informations</p>
         </div>
     </div>
