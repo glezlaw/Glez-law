@@ -1,0 +1,14 @@
+body { background: linear-gradient(to bottom, #1A4B6D, #2C3E50); color: #FFFFFF; font-family: 'Inter', sans-serif; padding: 20px; text-align: center; margin: 0; }
+.split { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.left, .right { width: 45%; min-width: 300px; background: #2C3E50; padding: 20px; border-radius: 10px; }
+h1 { color: #52D4A6; font-size: 2em; }
+h2 { color: #FFFFFF; }
+p { color: #B8C5D6; }
+ul { list-style-type: none; padding: 0; }
+li { color: #B8C5D6; margin: 10px 0; }
+a { color: #52D4A6; text-decoration: none; }
+img { max-width: 200px; margin: 20px 0; border-radius: 10px; }
+button { background: #52D4A6; color: #2C3E50; border: none; padding: 10px 20px; cursor: pointer; margin: 10px; border-radius: 5px; }
+form { margin: 20px 0; text-align: left; max-width: 400px; margin: 0 auto; }
+input, textarea { display: block; margin: 10px auto; padding: 10px; width: 80%; border: none; border-radius: 5px; }
+@media (max-width: 768px) { .left, .right { width: 100%; } }
