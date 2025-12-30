@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glez.law - International Tax Advisory for Expats on Costa del Sol</title>
-    <meta name="description" content="From NIE to tax efficiency, your all-in-one solution. International tax advisory and expat services on Spain's Costa del Sol.">
+    <title>Jorge González, LL.M. - International Tax Advisory for Expats in Spain</title>
+    <meta name="description" content="From NIE to tax efficiency, your all-in-one solution. International tax advisory and expat services in Spain.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
         }
         
         .logo-container {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
         
         .logo {
@@ -64,14 +64,14 @@
             font-size: 1.25rem;
             color: var(--turquoise);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
         
         .subtitle {
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.9);
             max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
         }
         
         /* Container */
@@ -81,12 +81,29 @@
             padding: 0 2rem;
         }
         
+        /* Profile Photo in About Section */
+        .profile-photo-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 4px solid var(--turquoise);
+        }
+        
         /* Two Column Layout */
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin: 4rem 0;
+            margin: 2rem 0 4rem;
         }
         
         .col {
@@ -126,16 +143,6 @@
         }
         
         /* About Section */
-        .about-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 2rem;
-            display: block;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
         .credentials {
             list-style: none;
             margin: 1.5rem 0;
@@ -162,6 +169,14 @@
             border-left: 4px solid var(--turquoise);
         }
         
+        .highlight p {
+            margin-bottom: 1rem;
+        }
+        
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+        
         /* Services */
         .service {
             background: var(--light-gray);
@@ -169,11 +184,24 @@
             border-radius: 12px;
             margin-bottom: 1.5rem;
             transition: all 0.3s;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
         }
         
         .service:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        
+        .service-content {
+            flex: 1;
         }
         
         .service h3 {
@@ -352,7 +380,7 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 2rem;
-            padding: 1rem;
+            padding: 1.5rem;
             background: var(--light-gray);
             border-radius: 12px;
             max-width: 600px;
@@ -360,8 +388,19 @@
         }
         
         .proton-logo {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+        
+        .proton-badge a {
+            color: var(--navy);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .proton-badge a:hover {
+            color: var(--turquoise);
         }
         
         /* Footer */
@@ -371,6 +410,11 @@
             text-align: center;
             padding: 2rem;
             font-size: 0.9rem;
+        }
+        
+        .footer-website {
+            color: var(--turquoise);
+            font-weight: 600;
         }
         
         /* Responsive */
@@ -389,6 +433,11 @@
                 height: 120px;
             }
             
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+            
             .video-buttons {
                 flex-direction: column;
                 align-items: stretch;
@@ -399,6 +448,16 @@
             .contact-methods {
                 flex-direction: column;
             }
+            
+            .service {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .service-icon {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
@@ -406,17 +465,14 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="logo-container">
-            <img src="Escudo.jpg" alt="Glez.law Coat of Arms" class="logo">
+            <img src="Escudo.jpg" alt="González Family Coat of Arms" class="logo">
         </div>
-        <h1>GLEZ.LAW</h1>
+        
+        <h1>Jorge González, LL.M.</h1>
         <p class="tagline">International Expat Advisor / Conseiller pour Expatriés</p>
         <p class="subtitle">
             From NIE to tax efficiency, your all-in-one solution / 
             Du NIE à l'efficacité fiscale, votre solution tout-en-un
-        </p>
-        <p class="subtitle">
-            Tax & Residency Services for Expats on Costa del Sol / 
-            Services Fiscaux et Résidence pour Expats sur Costa del Sol
         </p>
     </div>
 
@@ -424,6 +480,11 @@
     <section>
         <div class="container">
             <h2 class="section-title">About Me / À propos</h2>
+            
+            <div class="profile-photo-container">
+                <img src="jorge-photo.jpg" alt="Jorge González" class="profile-photo">
+            </div>
+            
             <div class="two-col">
                 <!-- English Column -->
                 <div class="col">
@@ -431,8 +492,6 @@
                         <span class="flag">🇬🇧</span>
                         <h3 class="col-title">English</h3>
                     </div>
-                    
-                    <img src="jorge-photo.jpg" alt="Jorge González" class="about-photo">
                     
                     <ul class="credentials">
                         <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
@@ -442,7 +501,9 @@
                     </ul>
                     
                     <div class="highlight">
-                        <p>Unlike other facilitators, my legal background and local roots in the area allow me to provide comprehensive advice and set you up ready from day one, making your integration seamless in every sense.</p>
+                        <p>With extensive knowledge in international law and deep understanding of expatriate challenges, I provide personalized solutions for individuals and businesses establishing themselves in Spain.</p>
+                        <p>My practice focuses exclusively on serving the international community, offering clear guidance through tax optimization, residency planning, and legal compliance in English, French, and Spanish.</p>
+                        <p>My approach combines legal expertise with a genuine understanding of the personal and professional transitions involved in relocating to a new country.</p>
                     </div>
                 </div>
                 
@@ -453,8 +514,6 @@
                         <h3 class="col-title">Français</h3>
                     </div>
                     
-                    <img src="jorge-photo.jpg" alt="Jorge González" class="about-photo">
-                    
                     <ul class="credentials">
                         <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
                         <li>LLM in International Business Law (National University of Ireland Maynooth et Université Catholique de Lyon)</li>
@@ -463,7 +522,9 @@
                     </ul>
                     
                     <div class="highlight">
-                        <p>Contrairement à d'autres facilitateurs, mon background académique en droit et le fait d'être né et élevé dans la région me permettent de vous conseiller de manière complète et de vous préparer dès le premier jour, rendant votre intégration fluide dans tous les sens.</p>
+                        <p>Avec une connaissance approfondie du droit international et une compréhension des défis des expatriés, je propose des solutions personnalisées pour les particuliers et entreprises s'établissant en Espagne.</p>
+                        <p>Ma pratique se concentre exclusivement sur la communauté internationale, offrant des conseils clairs en matière d'optimisation fiscale, de planification de résidence et de conformité légale en anglais, français et espagnol.</p>
+                        <p>Mon approche combine expertise juridique et compréhension authentique des transitions personnelles et professionnelles liées à la relocalisation.</p>
                     </div>
                 </div>
             </div>
@@ -483,23 +544,35 @@
                     </div>
                     
                     <div class="service">
-                        <h3>Beckham Regime</h3>
-                        <p>Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</p>
+                        <div class="service-icon">🏛️</div>
+                        <div class="service-content">
+                            <h3>Beckham Regime</h3>
+                            <p>Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>Tax Residency Strategy</h3>
-                        <p>Customized planning to optimize your fiscal residence and integration on Costa del Sol.</p>
+                        <div class="service-icon">📍</div>
+                        <div class="service-content">
+                            <h3>Tax Residency Strategy</h3>
+                            <p>Customized planning to optimize your fiscal residence and integration in Spain.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>International Tax Planning</h3>
-                        <p>Cross-border structures for income, investments, and estate planning for expats.</p>
+                        <div class="service-icon">🌍</div>
+                        <div class="service-content">
+                            <h3>International Tax Planning</h3>
+                            <p>Cross-border structures for income, investments, and estate planning for expats.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>All-in-one Support</h3>
-                        <p>From NIE application to tax efficiency, your comprehensive solution for seamless integration.</p>
+                        <div class="service-icon">✨</div>
+                        <div class="service-content">
+                            <h3>Comprehensive Relocation Support</h3>
+                            <p>From NIE to tax optimization, housing or business premises search, and administrative procedures—comprehensive guidance and support for individuals and businesses relocating to Spain.</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -511,23 +584,35 @@
                     </div>
                     
                     <div class="service">
-                        <h3>Régime Beckham</h3>
-                        <p>Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</p>
+                        <div class="service-icon">🏛️</div>
+                        <div class="service-content">
+                            <h3>Régime Beckham</h3>
+                            <p>Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>Stratégie de Résidence Fiscale</h3>
-                        <p>Planification personnalisée pour optimiser votre résidence et intégration sur Costa del Sol.</p>
+                        <div class="service-icon">📍</div>
+                        <div class="service-content">
+                            <h3>Stratégie de Résidence Fiscale</h3>
+                            <p>Planification personnalisée pour optimiser votre résidence et intégration en Espagne.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>Planification Fiscale Internationale</h3>
-                        <p>Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</p>
+                        <div class="service-icon">🌍</div>
+                        <div class="service-content">
+                            <h3>Planification Fiscale Internationale</h3>
+                            <p>Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</p>
+                        </div>
                     </div>
                     
                     <div class="service">
-                        <h3>Support Tout-en-un</h3>
-                        <p>De la demande de NIE à l'efficacité fiscale, votre solution complète pour une intégration sans faille.</p>
+                        <div class="service-icon">✨</div>
+                        <div class="service-content">
+                            <h3>Accompagnement Complet à la Relocalisation</h3>
+                            <p>De la demande de NIE à l'optimisation fiscale, recherche de logement ou locaux professionnels, et démarches administratives—accompagnement complet pour particuliers et entreprises s'installant en Espagne.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -588,14 +673,14 @@
         <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
         
         <div class="proton-badge">
-            <img src="protonmail-logo.png" alt="ProtonMail" class="proton-logo">
-            <p>We use ProtonMail for your security / Nous utilisons ProtonMail pour votre sécurité</p>
+            <img src="protonmail-logo.png" alt="Proton" class="proton-logo">
+            <p>We use <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> for the security of your information / Nous utilisons <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> pour la sécurité de vos informations</p>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Glez.law - Jorge González - Spanish Lawyer ICAAV #1457</p>
+        <p>&copy; 2025 <span class="footer-website">Glez.law</span> - Jorge González, LL.M.</p>
     </footer>
 </body>
 </html>
