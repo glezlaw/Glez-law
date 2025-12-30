@@ -3,72 +3,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glez.law - International Tax Advisory</title>
+    <title>Glez.law - International Tax Advisory for Expats on Costa del Sol</title>
+    <meta name="description" content="From NIE to tax efficiency, your all-in-one solution. International tax advisory and expat services on Spain's Costa del Sol.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { background: linear-gradient(to bottom, #1A4B6D, #2C3E50); color: #FFFFFF; font-family: 'Inter', sans-serif; padding: 20px; text-align: center; margin: 0; }
-        .split { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .left, .right { width: 45%; min-width: 300px; background: #2C3E50; padding: 20px; border-radius: 10px; }
-        h1 { color: #52D4A6; font-size: 2em; }
-        h2 { color: #FFFFFF; }
-        p { color: #B8C5D6; }
-        ul { list-style-type: none; padding: 0; }
-        li { color: #B8C5D6; margin: 10px 0; }
-        a { color: #52D4A6; text-decoration: none; }
-        img { max-width: 200px; margin: 20px 0; border-radius: 10px; }
-        button { background: #52D4A6; color: #2C3E50; border: none; padding: 10px 20px; cursor: pointer; margin: 10px; border-radius: 5px; }
-        form { margin: 20px 0; text-align: left; max-width: 400px; margin: 0 auto; }
-        input, textarea { display: block; margin: 10px auto; padding: 10px; width: 80%; border: none; border-radius: 5px; }
-        @media (max-width: 768px) { .left, .right { width: 100%; } }
+        :root {
+            --navy: #2C3E50;
+            --turquoise: #52D4A6;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text-gray: #6B7280;
+            --border-gray: #E5E7EB;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--navy);
+            line-height: 1.6;
+            background: var(--white);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a2332 100%);
+            color: var(--white);
+            padding: 4rem 2rem 5rem;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(82, 212, 166, 0.2);
+            border: 4px solid var(--turquoise);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--turquoise);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .col {
+            background: var(--white);
+        }
+        
+        .col-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--turquoise);
+        }
+        
+        .flag {
+            font-size: 2rem;
+        }
+        
+        .col-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        
+        /* Section */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+        }
+        
+        /* About Section */
+        .about-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .credentials {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .credentials li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+        
+        .credentials li:before {
+            content: "✓ ";
+            color: var(--turquoise);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .highlight {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--turquoise);
+        }
+        
+        /* Services */
+        .service {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .service:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service h3 {
+            color: var(--navy);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .service p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Contact Form */
+        .form-section {
+            background: var(--light-gray);
+            padding: 4rem 2rem;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--turquoise);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        button[type="submit"] {
+            background: var(--turquoise);
+            color: var(--navy);
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
+        }
+        
+        /* Video Calls Section */
+        .video-calls {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .video-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .video-btn {
+            background: var(--turquoise);
+            color: var(--navy);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .video-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
+        }
+        
+        /* Payment */
+        .payment {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--light-gray);
+        }
+        
+        .pay-btn {
+            background: var(--turquoise);
+            color: var(--navy);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .pay-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--turquoise);
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .proton-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .proton-logo {
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .video-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 300px;
+                margin: 2rem auto 0;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="Escudo.jpg" alt="Glez.law Logo">
-    <h1>International Expat Advisor / Conseiller pour Expats</h1>
-    <p>From NIE to tax efficiency, your all-in-one solution / Du NIE à l'efficacité fiscale, votre solution tout-en-un</p>
-    <p>Tax & Residency Services for Expats on Costa del Sol / Services Fiscaux et Résidence pour Expats sur Costa del Sol</p>
-
-    <div class="split">
-        <div class="left">
-            <h2>About Me / À propos</h2>
-            <img src="jorge-photo.jpg" alt="Jorge González">
-            <ul>
-                <li>Bachelor of Laws (Universidad Católica de Ávila).</li>
-                <li>LLM in International Business Law (National University of Ireland Maynooth and Université Catholique de Lyon).</li>
-                <li>Master of Laws in Tax Law (Lund University).</li>
-                <li>Master of Arts in Contemporary European Studies (University of Sussex).</li>
-                <li>Unlike other facilitators, my legal background and local roots in the area allow me to provide comprehensive advice and set you up ready from day one, making your integration seamless in every sense. / Contrairement à d'autres facilitateurs, mon background académique en droit et le fait d'être né et élevé dans la région me permettent de vous conseiller de manière complète et de vous préparer dès le premier jour, rendant votre intégration fluide dans tous les sens.</li>
-            </ul>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="logo-container">
+            <img src="Escudo.jpg" alt="Glez.law Coat of Arms" class="logo">
         </div>
-        <div class="right">
-            <h2>Services / Services</h2>
-            <ul>
-                <li>Beckham Regime: Special tax scheme for relocated workers with a fixed 24% rate for 6 years. / Régime Beckham: Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</li>
-                <li>Tax Residency Strategy: Customized planning to optimize your fiscal residence and integration on Costa del Sol. / Stratégie de Résidence Fiscale: Planification personnalisée pour optimiser votre résidence et intégration sur Costa del Sol.</li>
-                <li>International Tax Planning: Cross-border structures for income, investments, and estate planning for expats. / Planification Fiscale Internationale: Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</li>
-                <li>All-in-one Support: From NIE application to tax efficiency, your comprehensive solution for seamless integration. / Support Tout-en-un: De la demande de NIE à l'efficacité fiscale, votre solution complète pour une intégration sans faille.</li>
-            </ul>
-            <h2>Inquiry / Demande</h2>
+        <h1>GLEZ.LAW</h1>
+        <p class="tagline">International Expat Advisor / Conseiller pour Expatriés</p>
+        <p class="subtitle">
+            From NIE to tax efficiency, your all-in-one solution / 
+            Du NIE à l'efficacité fiscale, votre solution tout-en-un
+        </p>
+        <p class="subtitle">
+            Tax & Residency Services for Expats on Costa del Sol / 
+            Services Fiscaux et Résidence pour Expats sur Costa del Sol
+        </p>
+    </div>
+
+    <!-- About Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">About Me / À propos</h2>
+            <div class="two-col">
+                <!-- English Column -->
+                <div class="col">
+                    <div class="col-header">
+                        <span class="flag">🇬🇧</span>
+                        <h3 class="col-title">English</h3>
+                    </div>
+                    
+                    <img src="jorge-photo.jpg" alt="Jorge González" class="about-photo">
+                    
+                    <ul class="credentials">
+                        <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
+                        <li>LLM in International Business Law (National University of Ireland Maynooth and Université Catholique de Lyon)</li>
+                        <li>Master of Laws in Tax Law (Lund University)</li>
+                        <li>Master of Arts in Contemporary European Studies (University of Sussex)</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p>Unlike other facilitators, my legal background and local roots in the area allow me to provide comprehensive advice and set you up ready from day one, making your integration seamless in every sense.</p>
+                    </div>
+                </div>
+                
+                <!-- French Column -->
+                <div class="col">
+                    <div class="col-header">
+                        <span class="flag">🇫🇷</span>
+                        <h3 class="col-title">Français</h3>
+                    </div>
+                    
+                    <img src="jorge-photo.jpg" alt="Jorge González" class="about-photo">
+                    
+                    <ul class="credentials">
+                        <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
+                        <li>LLM in International Business Law (National University of Ireland Maynooth et Université Catholique de Lyon)</li>
+                        <li>Master of Laws in Tax Law (Lund University)</li>
+                        <li>Master of Arts in Contemporary European Studies (University of Sussex)</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p>Contrairement à d'autres facilitateurs, mon background académique en droit et le fait d'être né et élevé dans la région me permettent de vous conseiller de manière complète et de vous préparer dès le premier jour, rendant votre intégration fluide dans tous les sens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section style="background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Services / Services</h2>
+            <div class="two-col">
+                <!-- English Column -->
+                <div class="col">
+                    <div class="col-header">
+                        <span class="flag">🇬🇧</span>
+                        <h3 class="col-title">English</h3>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Beckham Regime</h3>
+                        <p>Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Tax Residency Strategy</h3>
+                        <p>Customized planning to optimize your fiscal residence and integration on Costa del Sol.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>International Tax Planning</h3>
+                        <p>Cross-border structures for income, investments, and estate planning for expats.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>All-in-one Support</h3>
+                        <p>From NIE application to tax efficiency, your comprehensive solution for seamless integration.</p>
+                    </div>
+                </div>
+                
+                <!-- French Column -->
+                <div class="col">
+                    <div class="col-header">
+                        <span class="flag">🇫🇷</span>
+                        <h3 class="col-title">Français</h3>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Régime Beckham</h3>
+                        <p>Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Stratégie de Résidence Fiscale</h3>
+                        <p>Planification personnalisée pour optimiser votre résidence et intégration sur Costa del Sol.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Planification Fiscale Internationale</h3>
+                        <p>Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</p>
+                    </div>
+                    
+                    <div class="service">
+                        <h3>Support Tout-en-un</h3>
+                        <p>De la demande de NIE à l'efficacité fiscale, votre solution complète pour une intégration sans faille.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <div class="form-section">
+        <div class="container">
+            <h2 class="section-title">Inquiry / Demande</h2>
             <form action="mailto:jorge@glez.law" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name / Votre Nom" required>
-                <input type="email" name="email" placeholder="Your Email / Votre Email" required>
-                <textarea name="message" placeholder="Your Question / Votre Question" required></textarea>
+                <div class="form-group">
+                    <label for="name">Your Name / Votre Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email / Votre Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Question / Votre Question</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
                 <button type="submit">Send / Envoyer</button>
             </form>
         </div>
     </div>
 
-    <h2>Video Calls / Appels Vidéo</h2>
-    <button onclick="window.location.href='https://whereby.com/glez-consulta';">Join Meeting / Rejoindre Réunion</button>
-    <button onclick="window.location.href='https://meet.jit.si/glez-consulta';">Join Jitsi / Rejoindre Jitsi</button>
+    <!-- Video Calls Section -->
+    <div class="video-calls">
+        <h2 class="section-title">Video Calls / Appels Vidéo</h2>
+        <div class="video-buttons">
+            <a href="https://meet.jit.si/glezlaw" target="_blank" class="video-btn">Join Jitsi / Rejoindre Jitsi</a>
+            <a href="https://whereby.com/glezlaw" target="_blank" class="video-btn">Join Whereby / Rejoindre Whereby</a>
+        </div>
+    </div>
 
-    <h2>Payment / Paiement</h2>
-    <button onclick="window.location.href='https://buy.stripe.com/xxx';">Pay Online / Payer en ligne</button> <!-- Replace with Stripe link -->
+    <!-- Payment Section -->
+    <div class="payment">
+        <h2 class="section-title">Payment / Paiement</h2>
+        <a href="#" class="pay-btn">Pay Online / Payer en ligne</a>
+    </div>
 
-    <h2>Contact / Contact</h2>
-    <p>📧 <a href="mailto:jorge@glez.law">jorge@glez.law</a></p>
-    <p>📱 +34 635 79 92 82</p>
-    <img src="qr-code(1).png" alt="WhatsApp QR" style="max-width: 150px;">
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+        <h2 class="section-title">Contact / Contact</h2>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:jorge@glez.law">jorge@glez.law</a>
+            </div>
+            <div class="contact-item">
+                <span>📱</span>
+                <a href="tel:+34635799282">+34 635 79 92 82</a>
+            </div>
+        </div>
+        
+        <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
+        
+        <div class="proton-badge">
+            <img src="protonmail-logo.png" alt="ProtonMail" class="proton-logo">
+            <p>We use ProtonMail for your security / Nous utilisons ProtonMail pour votre sécurité</p>
+        </div>
+    </div>
 
-    <p><img src="protonmail-logo.png" alt="ProtonMail Logo" style="max-width: 100px;"> We use ProtonMail for your security / Nous utilisons ProtonMail pour votre sécurité.</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Glez.law - Jorge González - Spanish Lawyer ICAAV #1457</p>
+    </footer>
 </body>
 </html>
