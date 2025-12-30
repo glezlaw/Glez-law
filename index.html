@@ -3,707 +3,502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge González, LL.M. - International Tax Advisory for Expats in Spain</title>
-    <meta name="description" content="From NIE to tax efficiency, your all-in-one solution. International tax advisory and expat services in Spain.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Glez.law - International Tax & Legal Advisory</title>
     <style>
-        :root {
-            --navy: #2C3E50;
-            --turquoise: #52D4A6;
-            --white: #FFFFFF;
-            --light-gray: #F8F9FA;
-            --text-gray: #6B7280;
-            --border-gray: #E5E7EB;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--navy);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            background: var(--white);
+            color: #333;
         }
-        
-        /* Hero Section */
+
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #1a2332 100%);
-            color: var(--white);
-            padding: 4rem 2rem 5rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px;
             text-align: center;
         }
-        
-        .logo-container {
-            margin-bottom: 2.5rem;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
-        
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(82, 212, 166, 0.2);
-            border: 4px solid var(--turquoise);
-        }
-        
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-        }
-        
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--turquoise);
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        
-        .subtitle {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
+
+        .hero p {
+            font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto 1rem;
+            margin: 0 auto 30px;
+            line-height: 1.8;
         }
-        
-        /* Container */
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 60px 20px;
         }
-        
-        /* Profile Photo in About Section */
-        .profile-photo-container {
+
+        .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #1e3c72;
+            font-weight: 600;
         }
-        
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-            display: block;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            border: 4px solid var(--turquoise);
-        }
-        
-        /* Two Column Layout */
-        .two-col {
+
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 2rem 0 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
-        
-        .col {
-            background: var(--white);
+
+        .language-section {
+            margin-bottom: 60px;
         }
-        
-        .col-header {
+
+        .language-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--turquoise);
+            gap: 10px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #50c878;
         }
-        
+
         .flag {
             font-size: 2rem;
         }
-        
-        .col-title {
+
+        .language-title {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--navy);
-        }
-        
-        /* Section */
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--navy);
-        }
-        
-        /* About Section */
-        .credentials {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .credentials li {
-            padding: 0.5rem 0;
-            font-size: 0.95rem;
-            color: var(--text-gray);
-        }
-        
-        .credentials li:before {
-            content: "✓ ";
-            color: var(--turquoise);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-        
-        .highlight {
-            background: var(--light-gray);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1.5rem;
-            border-left: 4px solid var(--turquoise);
-        }
-        
-        .highlight p {
-            margin-bottom: 1rem;
-        }
-        
-        .highlight p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* Services */
-        .service {
-            background: var(--light-gray);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .service:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-            margin-top: 0.25rem;
-        }
-        
-        .service-content {
-            flex: 1;
-        }
-        
-        .service h3 {
-            color: var(--navy);
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
             font-weight: 600;
+            color: #1e3c72;
         }
-        
-        .service p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #50c878;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
         }
-        
-        /* Contact Form */
-        .form-section {
-            background: var(--light-gray);
-            padding: 4rem 2rem;
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
-        
-        form {
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+
+        .service-description {
+            color: #666;
+            flex-grow: 1;
+        }
+
+        .inquiry-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .inquiry-form {
             max-width: 600px;
             margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
+
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 25px;
         }
-        
-        label {
+
+        .form-group label {
             display: block;
+            margin-bottom: 8px;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--navy);
+            color: #333;
         }
-        
-        input, textarea {
+
+        .form-group input,
+        .form-group textarea {
             width: 100%;
-            padding: 0.75rem 1rem;
-            border: 2px solid var(--border-gray);
-            border-radius: 8px;
-            font-family: inherit;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
             font-size: 1rem;
             transition: border-color 0.3s;
+            font-family: inherit;
         }
-        
-        input:focus, textarea:focus {
+
+        .form-group input:focus,
+        .form-group textarea:focus {
             outline: none;
-            border-color: var(--turquoise);
+            border-color: #50c878;
         }
-        
-        textarea {
-            min-height: 120px;
+
+        .form-group textarea {
+            min-height: 150px;
             resize: vertical;
         }
-        
-        button[type="submit"] {
-            background: var(--turquoise);
-            color: var(--navy);
+
+        .submit-btn {
+            background: #50c878;
+            color: white;
+            padding: 15px 40px;
             border: none;
-            padding: 1rem 3rem;
-            border-radius: 50px;
+            border-radius: 6px;
+            font-size: 1.1rem;
             font-weight: 600;
-            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s;
             width: 100%;
+            transition: background 0.3s;
         }
-        
-        button[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
+
+        .submit-btn:hover {
+            background: #45b369;
         }
-        
-        /* Video Calls Section */
-        .video-calls {
-            background: var(--navy);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .video-buttons {
+
+        .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 20px;
             justify-content: center;
+            margin: 40px 0;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
-        
-        .video-btn {
-            background: var(--turquoise);
-            color: var(--navy);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .video-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
-        }
-        
-        /* Payment */
-        .payment {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--light-gray);
-        }
-        
-        .pay-btn {
-            background: var(--turquoise);
-            color: var(--navy);
-            padding: 1rem 3rem;
-            border-radius: 50px;
+
+        .cta-btn {
+            padding: 15px 35px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
-            display: inline-block;
             transition: all 0.3s;
+            display: inline-block;
         }
-        
-        .pay-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(82, 212, 166, 0.3);
+
+        .btn-primary {
+            background: #50c878;
+            color: white;
         }
-        
-        /* Contact Info */
-        .contact-info {
+
+        .btn-primary:hover {
+            background: #45b369;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e3c72;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .payment-section {
+            background: #2c3e50;
+            padding: 60px 20px;
             text-align: center;
-            padding: 4rem 2rem;
         }
-        
-        .contact-methods {
+
+        .payment-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .payment-btn {
+            background: #50c878;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .payment-btn:hover {
+            background: #45b369;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .contact-info {
             display: flex;
-            gap: 2rem;
             justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
             flex-wrap: wrap;
-            margin: 2rem 0;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 10px;
             font-size: 1.1rem;
         }
-        
+
         .contact-item a {
-            color: var(--navy);
+            color: #1e3c72;
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .contact-item a:hover {
-            color: var(--turquoise);
+            color: #50c878;
         }
-        
-        .qr-code {
-            width: 200px;
-            height: 200px;
-            margin: 2rem auto;
-            display: block;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        .whatsapp-qr {
+            margin: 30px 0;
         }
-        
-        .proton-badge {
+
+        .whatsapp-qr img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .security-notice {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: var(--light-gray);
-            border-radius: 12px;
+            gap: 10px;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
             max-width: 600px;
-            margin: 2rem auto;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .proton-logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            flex-shrink: 0;
-        }
-        
+
         .proton-logo {
-            height: 60px;
-            width: auto;
-            display: block;
+            width: 24px;
+            height: 24px;
         }
-        
-        .proton-badge p {
-            margin: 0;
-            line-height: 1.5;
-        }
-        
-        .proton-badge a {
-            color: var(--navy);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .proton-badge a:hover {
-            color: var(--turquoise);
-        }
-        
-        /* Footer */
+
         footer {
-            background: var(--navy);
-            color: var(--white);
+            background: #1e3c72;
+            color: white;
+            padding: 30px 20px;
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
         }
-        
-        .footer-website {
-            color: var(--turquoise);
-            font-weight: 600;
+
+        footer a {
+            color: #50c878;
+            text-decoration: none;
         }
-        
-        /* Responsive */
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
-            
-            .two-col {
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
-            
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .profile-photo {
-                width: 160px;
-                height: 160px;
-            }
-            
-            .video-buttons {
-                flex-direction: column;
-                align-items: stretch;
-                max-width: 300px;
-                margin: 2rem auto 0;
-            }
-            
-            .contact-methods {
-                flex-direction: column;
-            }
-            
-            .service {
+
+            .contact-info {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
             }
-            
-            .service-icon {
-                margin-top: 0;
-            }
-            
-            .proton-badge {
+
+            .cta-buttons {
                 flex-direction: column;
-                text-align: center;
-            }
-            
-            .proton-logo {
-                height: 50px;
+                align-items: stretch;
             }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="logo-container">
-            <img src="Escudo.jpg" alt="González Family Coat of Arms" class="logo">
-        </div>
-        
-        <h1>Jorge González, LL.M.</h1>
-        <p class="tagline">International Expat Advisor / Conseiller pour Expatriés</p>
-        <p class="subtitle">
-            From NIE to tax efficiency, your all-in-one solution / 
-            Du NIE à l'efficacité fiscale, votre solution tout-en-un
-        </p>
-    </div>
-
-    <!-- About Section -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">About Me / À propos</h2>
-            
-            <div class="profile-photo-container">
-                <img src="jorge-photo.jpg" alt="Jorge González" class="profile-photo">
-            </div>
-            
-            <div class="two-col">
-                <!-- English Column -->
-                <div class="col">
-                    <div class="col-header">
-                        <span class="flag">🇬🇧</span>
-                        <h3 class="col-title">English</h3>
-                    </div>
-                    
-                    <ul class="credentials">
-                        <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
-                        <li>LLM in International Business Law (National University of Ireland Maynooth and Université Catholique de Lyon)</li>
-                        <li>Master of Laws in Tax Law (Lund University)</li>
-                        <li>Master of Arts in Contemporary European Studies (University of Sussex)</li>
-                    </ul>
-                    
-                    <div class="highlight">
-                        <p>With extensive knowledge in international law and deep understanding of expatriate challenges, I provide personalized solutions for individuals and businesses establishing themselves in Spain.</p>
-                        <p>My practice focuses exclusively on serving the international community, offering clear guidance through tax optimization, residency planning, and legal compliance in English, French, and Spanish.</p>
-                        <p>My approach combines legal expertise with a genuine understanding of the personal and professional transitions involved in relocating to a new country.</p>
-                    </div>
-                </div>
-                
-                <!-- French Column -->
-                <div class="col">
-                    <div class="col-header">
-                        <span class="flag">🇫🇷</span>
-                        <h3 class="col-title">Français</h3>
-                    </div>
-                    
-                    <ul class="credentials">
-                        <li>Bachelor of Laws (Universidad Católica de Ávila)</li>
-                        <li>LLM in International Business Law (National University of Ireland Maynooth et Université Catholique de Lyon)</li>
-                        <li>Master of Laws in Tax Law (Lund University)</li>
-                        <li>Master of Arts in Contemporary European Studies (University of Sussex)</li>
-                    </ul>
-                    
-                    <div class="highlight">
-                        <p>Avec une connaissance approfondie du droit international et une compréhension des défis des expatriés, je propose des solutions personnalisées pour les particuliers et entreprises s'établissant en Espagne.</p>
-                        <p>Ma pratique se concentre exclusivement sur la communauté internationale, offrant des conseils clairs en matière d'optimisation fiscale, de planification de résidence et de conformité légale en anglais, français et espagnol.</p>
-                        <p>Mon approche combine expertise juridique et compréhension authentique des transitions personnelles et professionnelles liées à la relocalisation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="hero">
+        <h1>International Tax & Legal Advisory</h1>
+        <p>Expert guidance for expatriates relocating to Spain's Costa del Sol. Specialized in international tax planning, residency strategies, and comprehensive relocation support for British, French, and Russian clients.</p>
+        <p style="font-style: italic; margin-top: 20px;">Conseil juridique et fiscal international pour les expatriés s'installant sur la Costa del Sol en Espagne. Spécialisés dans la planification fiscale internationale, les stratégies de résidence et l'accompagnement complet à la relocalisation pour les clients britanniques, français et russes.</p>
     </section>
 
     <!-- Services Section -->
-    <section style="background: var(--light-gray);">
-        <div class="container">
-            <h2 class="section-title">Services / Services</h2>
-            <div class="two-col">
-                <!-- English Column -->
-                <div class="col">
-                    <div class="col-header">
-                        <span class="flag">🇬🇧</span>
-                        <h3 class="col-title">English</h3>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">🏛️</div>
-                        <div class="service-content">
-                            <h3>Beckham Regime</h3>
-                            <p>Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">📍</div>
-                        <div class="service-content">
-                            <h3>Tax Residency Strategy</h3>
-                            <p>Customized planning to optimize your fiscal residence and integration in Spain.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">🌍</div>
-                        <div class="service-content">
-                            <h3>International Tax Planning</h3>
-                            <p>Cross-border structures for income, investments, and estate planning for expats.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">✨</div>
-                        <div class="service-content">
-                            <h3>Comprehensive Relocation Support</h3>
-                            <p>From NIE to tax optimization, housing or business premises search, and administrative procedures—comprehensive guidance and support for individuals and businesses relocating to Spain.</p>
-                        </div>
-                    </div>
+    <section class="container">
+        <h2 class="section-title">Services / Services</h2>
+
+        <!-- English Services -->
+        <div class="language-section">
+            <div class="language-header">
+                <span class="flag">🇬🇧</span>
+                <h3 class="language-title">English</h3>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🏛️</span>
+                    <h3 class="service-title">Beckham Regime</h3>
+                    <p class="service-description">Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</p>
                 </div>
-                
-                <!-- French Column -->
-                <div class="col">
-                    <div class="col-header">
-                        <span class="flag">🇫🇷</span>
-                        <h3 class="col-title">Français</h3>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">🏛️</div>
-                        <div class="service-content">
-                            <h3>Régime Beckham</h3>
-                            <p>Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">📍</div>
-                        <div class="service-content">
-                            <h3>Stratégie de Résidence Fiscale</h3>
-                            <p>Planification personnalisée pour optimiser votre résidence et intégration en Espagne.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">🌍</div>
-                        <div class="service-content">
-                            <h3>Planification Fiscale Internationale</h3>
-                            <p>Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service">
-                        <div class="service-icon">✨</div>
-                        <div class="service-content">
-                            <h3>Accompagnement Complet à la Relocalisation</h3>
-                            <p>De la demande de NIE à l'optimisation fiscale, recherche de logement ou locaux professionnels, et démarches administratives—accompagnement complet pour particuliers et entreprises s'installant en Espagne.</p>
-                        </div>
-                    </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📍</span>
+                    <h3 class="service-title">Tax Residency Strategy</h3>
+                    <p class="service-description">Customized planning to optimize your fiscal residence and integration in Spain.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🌍</span>
+                    <h3 class="service-title">International Tax Planning</h3>
+                    <p class="service-description">Cross-border structures for income, investments, and estate planning for expats.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">✨</span>
+                    <h3 class="service-title">Comprehensive Relocation Support</h3>
+                    <p class="service-description">From NIE to tax optimization, housing or business premises search, and administrative procedures—comprehensive guidance and support for individuals and businesses relocating to Spain.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- French Services -->
+        <div class="language-section">
+            <div class="language-header">
+                <span class="flag">🇫🇷</span>
+                <h3 class="language-title">Français</h3>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🏛️</span>
+                    <h3 class="service-title">Régime Beckham</h3>
+                    <p class="service-description">Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📍</span>
+                    <h3 class="service-title">Stratégie de Résidence Fiscale</h3>
+                    <p class="service-description">Planification personnalisée pour optimiser votre résidence et intégration en Espagne.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🌍</span>
+                    <h3 class="service-title">Planification Fiscale Internationale</h3>
+                    <p class="service-description">Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">✨</span>
+                    <h3 class="service-title">Accompagnement Complet à la Relocalisation</h3>
+                    <p class="service-description">De la demande de NIE à l'optimisation fiscale, recherche de logement ou locaux professionnels, et démarches administratives—accompagnement complet pour particuliers et entreprises s'installant en Espagne.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <div class="form-section">
+    <!-- Inquiry Form -->
+    <section class="inquiry-section">
         <div class="container">
             <h2 class="section-title">Inquiry / Demande</h2>
-            <form action="mailto:jorge@glez.law" method="post" enctype="text/plain">
+            <form class="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name / Votre Nom</label>
                     <input type="text" id="name" name="name" required>
                 </div>
+
                 <div class="form-group">
                     <label for="email">Your Email / Votre Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="message">Your Question / Votre Question</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <label for="question">Your Question / Votre Question</label>
+                    <textarea id="question" name="question" required></textarea>
                 </div>
-                <button type="submit">Send / Envoyer</button>
+
+                <button type="submit" class="submit-btn">Send / Envoyer</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Video Calls Section -->
-    <div class="video-calls">
-        <h2 class="section-title">Video Calls / Appels Vidéo</h2>
-        <div class="video-buttons">
-            <a href="https://meet.jit.si/glezlaw" target="_blank" class="video-btn">Join Jitsi / Rejoindre Jitsi</a>
-            <a href="https://whereby.com/glezlaw" target="_blank" class="video-btn">Join Whereby / Rejoindre Whereby</a>
+    <!-- CTA Buttons -->
+    <div class="container">
+        <div class="cta-buttons">
+            <a href="https://cal.com/glez-law" class="cta-btn btn-primary">Join Jitsi / Rejoindre Jitsi</a>
+            <a href="https://cal.com/glez-law" class="cta-btn btn-primary">Join Whereby / Rejoindre Whereby</a>
         </div>
     </div>
 
     <!-- Payment Section -->
-    <div class="payment">
-        <h2 class="section-title">Payment / Paiement</h2>
-        <a href="#" class="pay-btn">Pay Online / Payer en ligne</a>
-    </div>
+    <section class="payment-section">
+        <h2>Payment / Paiement</h2>
+        <a href="https://www.paypal.com/paypalme/youraccount" class="payment-btn">Pay Online / Payer en ligne</a>
+    </section>
 
-    <!-- Contact Info Section -->
-    <div class="contact-info">
-        <h2 class="section-title">Contact / Contact</h2>
-        <div class="contact-methods">
-            <div class="contact-item">
-                <span>📧</span>
-                <a href="mailto:jorge@glez.law">jorge@glez.law</a>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact / Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:jorge@glez.law">jorge@glez.law</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+34635799282">+34 635 79 92 82</a>
+                </div>
             </div>
-            <div class="contact-item">
-                <span>📱</span>
-                <a href="tel:+34635799282">+34 635 79 92 82</a>
+
+            <div class="whatsapp-qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/34635799282" alt="WhatsApp QR Code">
+            </div>
+
+            <div class="security-notice">
+                <svg class="proton-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L4 8v8c0 7.732 5.373 14.966 12 16 6.627-1.034 12-8.268 12-16V8L16 2z" fill="#6D4AFF"/>
+                    <path d="M16 10v12M10 16h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>We use <a href="https://proton.me" target="_blank" rel="noopener noreferrer" style="color: #6D4AFF; text-decoration: none; font-weight: 600;">Proton</a> for the security of your information / Nous utilisons Proton pour la sécurité de vos informations</p>
             </div>
         </div>
-        
-        <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
-        
-        <div class="proton-badge">
-            <a href="https://proton.me" target="_blank" rel="noopener" class="proton-logo-link">
-                <img src="protonmail-logo.svg" alt="Proton - Privacy by default" class="proton-logo">
-            </a>
-            <p>We use <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> for the security of your information / Nous utilisons <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> pour la sécurité de vos informations</p>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 <span class="footer-website">Glez.law</span> - Jorge González, LL.M.</p>
+        <p>&copy; 2025 <a href="https://glez.law">Glez.law</a> - Jorge González, LL.M.</p>
     </footer>
 </body>
 </html>
